@@ -20,7 +20,5 @@ List of plugins, contents and stuff i used for this website:
 * Superscrollorama is licensed under MIT & GPL. For future reference you can check author link.
 
 
-![CC Licensed](http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png)
-
-
 2013 - [Hellnest](http://www.hellnest.com/ "My Website")
+![CC Licensed](http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png)
