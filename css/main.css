@@ -23,8 +23,9 @@ textarea {
 }
 
 body {
-    font-size: 1em;
-    line-height: 1.4;
+    font-size: 1em; line-height: 1.4;
+    overflow: hidden;
+    -webkit-text-size-adjust: 100%;
 }
 
 /*
@@ -48,12 +49,12 @@ body {
  */
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+    border: none;
+    border-top: 1px solid rgb(212, 212, 212);
+    border-bottom: 1px solid white; display: block;
+    height: 0px; line-height: 0px;
+    margin: 20px 0 40px 0; padding: 0;
+    display: block; height: 1px;
 }
 
 /*
@@ -93,38 +94,140 @@ textarea {
     padding: 0.2em 0;
 }
 
-/* ==========================================================================
-   AFAIR 2014 CSS
-   ========================================================================== */
-
-/* ==Typography== */
+/* =============
+    Typography
+   ============= */
 
 p {
     font-family: "Open Sans", sans-serif;
+    margin-bottom: 15px;
 }
 
-h3 {
+h1, h2, h3, h4, h5, h6 {
     font-family: "Roboto", sans-serif;
 }
 
-/* Header Satu */
-
-header #satu {
-    background: #fff; height: 400px;
-    position: relative;
+b {
+    font-weight: 700;
 }
 
-@media (max-width:620px) {
-header #satu {
-        height: 528px;
-    }
+a {
+    text-decoration: none; color: #fff;
+}
+a.blue {
+    background: #00AEA8; padding: 0 6px;
+}
+a.red {
+    background: #d1281f; padding: 0 6px;
+}
+/* ==========================================================================
+   AFAIR 2014 CSS
+   ========================================================================== */
+/* BAR */
+.fsn-bar {
+    background: #1a1a1a url(../img/bg_menu.png);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+.fsn-bar .bar-body {
+    width: 980px; margin: 0 auto;
 }
 
-header .container {
-    position: relative; height: 100%;
+/* Menu */
+.menu .fsn-menu-item {
+    float: left;
+}
+.menu .fsn-menu-item.right {
+    float: right;
+}
+.menu .fsn-menu-item span,
+.menu .fsn-menu-item a {
+    color: #a9a9a9;
+    text-transform: uppercase;
+    font-size: 13px; line-height: 13px;
+    padding: 14px 22px; display: block;
+}
+.menu .fsn-menu-item.fsn-current {
+    background: #00AEA8;
+}
+.menu .fsn-menu-item:hover a,
+.menu .fsn-menu-item:hover span {
+    color: #ccc;
+}
+.menu .fsn-menu-item.fsn-current span {
+    color: #fff;
 }
 
 
+/* Content Position */
+.content-left {
+    float: left; width: 400px;
+    padding-top: 30px;
+}
+.content-right {
+    float: right; width: 490px;
+    padding-top: 30px;
+}
+.content-left.s2 {
+    float: left; width: 340px;
+}
+.content-right.s2 {
+    float: right; width: 640px;
+}
+.content-left .image {
+    margin-top: 70px;
+}
+
+/* dots */
+.fsn-dots .fsn-dots-item {
+    background: #fff; opacity: 0.3;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 30);
+    -MS-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 30);
+}
+.fsn-dots .fsn-dots-item:hover {
+    opacity: 0.4;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 40);
+    -MS-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 40);
+}
+.fsn-dots .fsn-dots-item.fsn-current {
+    background: #fff; opacity: 0.9;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 90);
+    MS-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 90);
+}
+
+/* page */
+.fsn-page-body {
+    color: #fff;
+}   
+.fsn-page {
+    background-image: url(../img/bg.png);
+    background-color: #000;
+}
+
+/* footer */     
+.fsn-footer {
+    background: #1a1a1a url(/img/bg_menu.png);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+.fsn-footer .footer-body {
+    width: 980px; margin: 0 auto;
+    padding: 8px 0;
+}
+.fsn-footer .footer-body p {
+    margin: 0; font-size: 11px;
+    line-height: 11px; color: #666;
+    text-align: center;
+}
+.fsn-footer .footer-body .divide {
+    padding: 0 5px; color: #555;
+}
+.fsn-footer .footer-body a {
+    color: #888;
+}
+.fsn-footer .footer-body a:hover {
+    text-decoration: underline;
+}
 
 
 

@@ -11,32 +11,60 @@
         <meta name="viewport" content="width=device-width">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-        <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/animate.css">
-        <link rel="author" href="https://plus.google.com/107677850587168066989" />
-        <script src="js/p1lax.js"></script>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="author" href="https://plus.google.com/107677850587168066989"/>
+
+        <!--Script that will be used in this website -->
+        <script data-main="fsn/plugin" src="fsn/require-jquery.js"></script>
+        <!--<script src="js/p1lax.js"></script>
         <script src="js/waypoint.js"></script>
-        <script src="js/jparallax.js"></script>
+        <script src="js/jparallax.js"></script>-->
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
+
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
+        <!-- Start the Full Navigation Wrap -->
+        <div id="fsn" style="visibility: hidden">
 
-        <!-- Add your site or application content here -->
-    <header id="satu">
-        <h3>Testing Font</h3>
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-    </header>
+        <header>
+            <div class="bar-body">
+                <div class="menu">   
+                    <nav data-menu="section:all;level:1"></nav>
+                <div class="clear"></div>
+                </div>
+            </div>
+        </header>
+
+            <section data-title="What is AFAIR UI">
+                    <article data-title="What is AFAIR UI" data-link="what-about" data-background="#009cff">
+                        <p>This is a test</p>
+                    </article>
+            </section>
+
+            <section data-title="Welcome to AFAIR UI">
+                    <article data-title:"Welcome to AFAIR UI" data-link="welcome" data-background="#00cab9">
+                        <p>This is second event</p>
+                    </article>
+            </section>
+        
+        <footer>
+            <div class="footer-body">
+            <p>2014 - AFAIR UI | Designed by <a href="http://www.hellnest.com" title="hellnest">hellnest</a> - <a href="http://www.kotakhosting.com" title="Kotak Hosting">Kotak Hosting</a></p>
+            </div>
+        </footer>
+
+        </div>
         
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <script src="js/main.js"></script>-->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
