@@ -18,9 +18,11 @@
 
         <!--Script that will be used in this website -->
         <script data-main="fsn/plugin" src="fsn/require-jquery.js"></script>
-        <!--<script src="js/p1lax.js"></script>
-        <script src="js/waypoint.js"></script>
-        <script src="js/jparallax.js"></script>-->
+        <script src="js/waypoint.js" type="text/javascript"></script>
+        <script src="js/jparallax.js" type="text/javascript"></script>
+        <script src="js/jquery.vegas.js" type="text/javascript"></script>
+        <script src="js/slides.min.jquery.js" type="text/javascript"></script>
+        <script src="js/p1lax.js" type="text/javascript"></script>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
 
@@ -40,21 +42,82 @@
             </div>
         </header>
 
-            <section data-title="What is AFAIR UI">
-                    <article data-title="What is AFAIR UI" data-link="what-about" data-background="#009cff">
-                        <p>This is a test</p>
+            <section data-title="Welcome">
+            <script>
+				$(function() {
+				if(jQuery('#parallax').length != 0){
+					if(jQuery(window).width() > 0){
+						
+						//apply parallax effect
+						jQuery('#parallax .parallax-layer').parallax(
+							{mouseport: jQuery('#parallax')}
+						);
+		
+						$(window).load(function(){
+							jQuery('#parallax .parallax-layer').css('display','block');		
+				
+						});
+					}
+				}
+			});
+			</script>
+                    <div id="parallax" class="parallax-viewport">
+                        <div class="parallax-layer parallax4">
+                            <img src="img/kakek-fly.png" />
+                        </div>
+                    </div>
+                    <article data-link="welcome-page" data-background="#fdbd59">
+                    <div class="content-top-left">
+                        <div class="image">
+                            <a href="#about-afair">
+                                <img src="img/topleft-logo.png" width="148" height="158" alt="AFAIR UI 2014" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content-bottomc">
+                        <img src="img/bowl.png" width="200" height="100" />
+                    </div>
+                    </article>
+                    <article data-link="about-afair" data-background="#fdbd59">
+                        <div class="abox1">
+                        <spanbox1>Architecture UI Fair (AFAIR)</spanbox1>  is an annual event in a form of open house which is hosted by Architecture Student Council and Department of Architecture, Faculty of Engineering, University of Indonesia. For the 5th time, in 2014, AFAIR consistently present with a contextual theme for architectural world and another creative fields. AFAIR 2014 is wrapped in a series of events which are competition, lecture and discussion, social workshop, talkshow, and exhibition.
+                        </div>
+                        <div class="verticalLine1"></div>
+                        <div class="abox2">
+                        <spanbox2>'Architecture for EveryONE'</spanbox2>is a theme chosen in AFAIR 2014. By this theme, AFAIR tries to show the other side of design and architecture, about how design has to fulfill various and specific needs and desires of each individuals. The concept of space as body extension shows how a design is made with understandsing every special characteristics of each individuals. 
+                        <br />
+                        On the other hand, in practice, architecture and design are often unable to fully respond the needs of each individual's variety special characteristics because of its costs and its productivity efficiency consideration.
+                        </div>
+                        <div class="verticalLine2"></div>
+                        <div class="abox3">
+                        With the theme "Architecture fo EveryONE", AFAIR 2014 tries to looking back the possibility of architecture starts from the smallest scale. Every design element was designed based on each individual. Each design has its "own selfhood". Every standards and methods that already exist can be turned into many possibilities.
+                        <br />
+                        <spanbox3>it's not a matter of the sake of many people or individuals, but rather how the design can pass through the process of establishment based on its user's needs and desires.</spanbox3>
+                        </div>
+                        <div class="kpl1">
+                            <a href="#"><img class="animated bounce" src="img/hb1.png" /></a>
+                        </div>
+                        <div class="contentl-bottom">
+                            <img src="img/afair-left-bottom.png" />
+                        </div>
+                        <div class="contentr-bottom">
+                            <img src="img/afair-right-bottom.png" />
+                        </div>
                     </article>
             </section>
 
-            <section data-title="Welcome to AFAIR UI">
-                    <article data-title:"Welcome to AFAIR UI" data-link="welcome" data-background="#00cab9">
+            <section data-title="Home">
+                    <article data-title:"Home" data-link="main" data-background="#fdbd59">
                         <p>This is second event</p>
+                    </article>
+                    <article data-background="#fdbd59">
+                        <p>testing 2nd article</p>
                     </article>
             </section>
         
         <footer>
             <div class="footer-body">
-            <p>2014 - AFAIR UI | Designed by <a href="http://www.hellnest.com" title="hellnest">hellnest</a> - <a href="http://www.kotakhosting.com" title="Kotak Hosting">Kotak Hosting</a></p>
+            <p>2014 - <a href="http://www.afairui.com">AFAIR UI</a> | Designed by <a href="http://www.hellnest.com" title="hellnest">hellnest</a> - <a href="http://www.kotakhosting.com" title="Kotak Hosting">Kotak Hosting</a></p>
             </div>
         </footer>
 
