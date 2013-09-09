@@ -354,7 +354,7 @@ div.note .bg {
 }
 .abox1 {
     position: absolute;
-    font-size: 80%; text-align:justify;
+    font-size: 85%; text-align:justify;
     padding-top: 3%; width: 22%;
     height: auto;
     margin-right: 80%; margin-left: 1%;
@@ -364,7 +364,7 @@ spanbox1 {
 }
 .abox2 {
     position: absolute;
-    font-size: 80%; text-align:justify;
+    font-size: 85%; text-align:justify;
     padding-top: 6%; width: 22%;
     height: auto; margin-right: 60%;
     margin-left: 27%;
@@ -374,7 +374,7 @@ spanbox2 {
 }
 .abox3 {
     position: absolute;
-    font-size: 80%; text-align:justify;
+    font-size: 85%; text-align:justify;
     padding-top: 6%; width: 22%;
     height: auto; margin-right: 30%;
     margin-left: 53%;
@@ -383,13 +383,223 @@ spanbox3 {
     color: #000;
 }
 /* Animation Head */
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-o-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 .kpl1 {
-    position:absolute; padding-top: 2%;
-    margin-right: 2%;
+    position:absolute; padding-top: 1%;
+    margin-left: 98%;
+    -webkit-animation: blink 3s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: blink 3s;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: blink 3s;
+    -o-animation-iteration-count: infinite;
+}
+.kpl2 {
+    position:absolute; padding-top: 3%;
+    margin-left: 96%;
+    -webkit-animation: blink 4s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: blink 4s;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: blink 4s;
+    -o-animation-iteration-count: infinite;
+}
+.kpl3 {
+    position:absolute; padding-top: 3%;
+    margin-left: 99%;
+    -webkit-animation: blink 2s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: blink 2s;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: blink 2s;
+    -o-animation-iteration-count: infinite;
+}
+.kpl4 {
+    position:absolute; padding-top: 5%;
+    margin-left: 93%;
+    -webkit-animation: blink 3s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: blink 3s;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: blink 3s;
+    -o-animation-iteration-count: infinite;
+}
+.kpl5 {
+    position:absolute; padding-top: 6%;
+    margin-left: 96%;
+    -webkit-animation: blink 2s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: blink 2s;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: blink 2s;
+    -o-animation-iteration-count: infinite;
+}
+.kpl6 {
+    position:absolute; padding-top: 6%;
+    margin-left: 99%;
+    -webkit-animation: blink 3s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: blink 3s;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: blink 3s;
+    -o-animation-iteration-count: infinite;
+}
+.kpl7 {
+    position:absolute; padding-top: 8%;
+    margin-left: 91%%;
+    -webkit-animation: blink 2s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: blink 2s;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: blink 2s;
+    -o-animation-iteration-count: infinite;
+}
+.kpl8 {
+    position:absolute; padding-top: 8%;
+    margin-left: 93%;
+    -webkit-animation: blink 3s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: blink 3s;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: blink 3s;
+    -o-animation-iteration-count: infinite;
+}
+.kpl9 {
+    position:absolute; padding-top: 9%;
+    margin-left: 96%;
+    -webkit-animation: blink 4s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: blink 4s;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: blink 4s;
+    -o-animation-iteration-count: infinite;
+}
+.kpl10 {
+    position:absolute; padding-top: 9%;
+    margin-left: 99%;
+    -webkit-animation: blink 3s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation: blink 3s;
+    -moz-animation-iteration-count: infinite;
+    -o-animation: blink 3s;
+    -o-animation-iteration-count: infinite;
 }
 
+/* Main Page Navigation and Animation */
+.tabung {
+    position: absolute; width: 252px;
+    margin-left: 41%;
+}
+.pipe1 {
+    position: absolute; 
+    margin-top: 7%; margin-left: 58%; 
+    width: auto; height: auto;
+}
+.pipe2 {
+    position: absolute; 
+    margin-top: 18%; margin-left: 19%; 
+    width: auto; height: auto;
+}
+/* Gear Animation */
+@-webkit-keyframes gear-moves {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@-moz-keyframes gear-moves {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
 
+.gear-main {
+    position: absolute;
+    margin-top: 13.8%; margin-left: 64.5%;
+    width: auto; height: auto;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: normal;
+    -moz-animation-delay: 0;
+    -moz-animation-play-state: running;
+    -moz-animation-fill-mode: forwards;
 
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-delay: 0;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+	
+    -moz-animation-name: gear-moves;
+    -moz-animation-duration: 10s;
+
+    -webkit-animation-name: gear-moves;
+    -webkit-animation-duration: 10s;
+}
+.gear-main_sub {
+    position: absolute;
+    margin-top: 17%; margin-left: 30.5%;
+    width: auto; height: auto;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: normal;
+    -moz-animation-delay: 0;
+    -moz-animation-play-state: running;
+    -moz-animation-fill-mode: forwards;
+
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-delay: 0;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+	
+    -moz-animation-name: gear-moves;
+    -moz-animation-duration: 8s;
+
+    -webkit-animation-name: gear-moves;
+    -webkit-animation-duration: 8s;
+}
+
+/* Water Drop Animation */
 
 /* ==========================================================================
    Helper classes
