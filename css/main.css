@@ -101,6 +101,7 @@ textarea {
 p {
     font-family: "Open Sans", sans-serif;
     margin-bottom: 15px;
+    color: #1a1a1a;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -243,7 +244,7 @@ div.note .bg {
 
 /* dots */
 .fsn-dots .fsn-dots-item {
-    background: #fff; opacity: 0.3;
+    background: #fdbd59; opacity: 0.3;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 30);
     -MS-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 30);
 }
@@ -253,7 +254,7 @@ div.note .bg {
     -MS-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 40);
 }
 .fsn-dots .fsn-dots-item.fsn-current {
-    background: #fff; opacity: 0.9;
+    background: #fdbd59; opacity: 0.9;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 90);
     MS-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 90);
 }
@@ -263,13 +264,13 @@ div.note .bg {
     color: #fff;
 }   
 .fsn-page {
-    background-image: url(../img/bg.png);
+    background-image: url(img/bg.png);
     background-color: #000;
 }
 
 /* footer */     
 .fsn-footer {
-    background: #1a1a1a url(/img/bg_menu.png);
+    background: #1a1a1a url(img/bg_menu.png);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
     overflow: hidden;
 }
@@ -313,32 +314,7 @@ div.note .bg {
 .parallax6 {width: 1472px; height: 410px; display: block; top: 0%; margin-top: 0px; left: 0%; margin-left: 0px;}
 
 /* modal dialogs */
- #hider
-    {
-        position:absolute;
-        top: 0%;
-        left: 0%;
-        width:1600px;
-        height:2000px;
-        margin-top: -800px; /*set to a negative number 1/2 of your height*/
-        margin-left: -500px; /*set to a negative number 1/2 of your width*/
-        /*
-        z- index must be lower than pop up box
-       */
-        z-index: 99;
-       background-color:Black;
-       //for transparency
-       opacity:0.6;
-    }
-#popup_box {
-    position:absolute;
-    top: 50%; left: 50%;
-    width: 10em; height: 10em;
-    margin-top: -5em; margin-left: -5em;
-    border: 1px solid #ccc; border: 2px solid black;
-    z-index:100;
-}
-
+ 
 /* About Afair */
 .verticalLine1 {
     position: absolute; 
@@ -519,18 +495,47 @@ spanbox3 {
 
 /* Main Page Navigation and Animation */
 .tabung {
-    position: absolute; width: 252px;
-    margin-left: 41%;
+    position: relative; left: 41.1%;
+    margin: 0 0 0 0;
+    max-width: 100%; max-height: auto;
+    overflow: hidden; z-index: 1;
+}
+.tabung img {
+    width: 18% !important; 
+    height: auto !important;
 }
 .pipe1 {
-    position: absolute; 
-    margin-top: 7%; margin-left: 58%; 
-    width: auto; height: auto;
+    position: relative; 
+    margin-top: -29%; left: 58.5%;
+    max-width: 100%; height: auto;
+    float: none;
+    overflow: hidden; z-index:10;
 }
+.pipe1 img {
+    width: 12% !important;
+    height: auto !important;
+}        
 .pipe2 {
-    position: absolute; 
-    margin-top: 18%; margin-left: 19%; 
-    width: auto; height: auto;
+    position: relative; 
+    margin-top: -9%; left: 16.5%;
+    max-width: 100%; max-height: auto;
+    float: none;
+    overflow: hidden; z-index: 10;
+}
+.pipe2 img {
+    width: 25% !important; 
+    height: auto !important;
+}
+.pipe3-hor {
+    position: relative;
+    margin-top: -28%; left:66.3%;
+    max-width: 100%; max-height: auto;
+    overflow: hidden; z-index: 10;
+    float: none;
+}
+.pipe3-hor img {
+    width: 50% !important;
+    height: auto !important;
 }
 /* Gear Animation */
 @-webkit-keyframes gear-moves {
@@ -551,9 +556,9 @@ spanbox3 {
 }
 
 .gear-main {
-    position: absolute;
-    margin-top: 13.8%; margin-left: 64.5%;
-    width: auto; height: auto;
+    position: absolute; overflow: hidden;
+    top: 140%%; left: 64%;
+    max-width: 100%; z-index: 15;
     -moz-animation-timing-function: linear;
     -moz-animation-iteration-count: infinite;
     -moz-animation-direction: normal;
@@ -576,8 +581,8 @@ spanbox3 {
 }
 .gear-main_sub {
     position: absolute;
-    margin-top: 17%; margin-left: 30.5%;
-    width: auto; height: auto;
+    top: 171%; left: 29.5%;
+    max-width: 100%; z-index: 15;
     -moz-animation-timing-function: linear;
     -moz-animation-iteration-count: infinite;
     -moz-animation-direction: normal;
@@ -599,8 +604,176 @@ spanbox3 {
     -webkit-animation-duration: 8s;
 }
 
-/* Water Drop Animation */
+/* Smoke Animation */
 
+/* Water Drop Animation */
+.waterdrop1 {
+    animation:waterdrop 3s infinite;
+    -webkit-animation:waterdrop 3s infinite;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    
+    -webkit-animation-direction: normal;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: blink;
+    -webkit-animation-timing-function:cubic-bezier(0,0,0.50,1);
+}
+
+.waterdrop2 {
+    animation:waterdrop 4s infinite;
+    -webkit-animation:waterdrop 4s infinite;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    
+    -webkit-animation-direction: normal;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: blink;
+    -webkit-animation-timing-function:cubic-bezier(0,0,0.50,1);
+}
+
+.waterdrop3 {
+    animation:waterdrop 5s infinite;
+    -webkit-animation:waterdrop 5s infinite;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    
+    -webkit-animation-direction: normal;
+    -webkit-animation-duration: 7s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: blink;
+    -webkit-animation-timing-function:cubic-bezier(0,0,0.75,1);
+}
+#water1 {
+    position: absolute; overflow: hidden;
+    top: 268%; left: 16.7%;
+    z-index: 5; float:left;
+}
+#water2 {
+    position: absolute; overflow: hidden;
+    top:282%; left:16.7%;
+    z-index: 5; float: left;
+}
+#water3 {
+    position: absolute; overflow: hidden;
+    top:299%; left:16.7%;
+    z-index: 5; float: left;
+}
+
+/* Navigation Button */
+.button {
+	display: inline-block;
+	position: relative;
+	color: #888;
+	text-shadow: 0 1px 0 rgba(255,255,255, 0.8);
+	text-decoration: none; text-align: center;
+	padding: 8px 12px;
+	font-size: 12px; font-weight: 700;
+	font-family: helvetica, arial, sans-serif;
+	border-radius: 4px;
+	border: 1px solid #bcbcbc;
+
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+
+	background-image: -webkit-linear-gradient(top, rgba(253,189,89,1) 0%,rgba(237,173,73,1) 60%,rgba(228,162,65,1) 100%);
+	background-image: -moz-linear-gradient(top, rgba(253,189,89,1) 0%,rgba(237,173,73,1) 60%,rgba(228,162,65,1) 100%);
+	background-image: -o-linear-gradient(top, rgba(253,189,89,1) 0%,rgba(237,173,73,1) 60%,rgba(228,162,65,1) 100%);
+	background-image: -ms-linear-gradient(top, rgba(253,189,89,1) 0%,rgba(237,173,73,1) 60%,rgba(228,162,65,1) 100%);
+	background-image: linear-gradient(top, rgba(253,189,89,1) 0%,rgba(237,173,73,1) 60%,rgba(228,162,65,1) 100%);
+}
+
+.button:hover {
+	color: #555;
+}
+
+.button:active,.button:active:after,.button:active:before {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+/* Next Button */
+.button.next {
+	border-right: none;
+}
+
+.button.next:after {
+	content: '';
+	position: absolute;
+	height: 48%;
+	width: 15px;
+	border-right: 1px solid #bcbcbc;
+
+	background-image: -webkit-linear-gradient(top, rgba(238,174,74,1) 0%,rgba(237,173,73,1) 10%,rgba(223,157,60,1) 100%);
+	background-image: -moz-linear-gradient(top, rgba(238,174,74,1) 0%,rgba(237,173,73,1) 10%,rgba(223,157,60,1) 100%);
+	background-image: -o-linear-gradient(top, rgba(238,174,74,1) 0%,rgba(237,173,73,1) 10%,rgba(223,157,60,1) 100%);
+	background-image: -ms-linear-gradient(top, rgba(240,240,240,1) 0%,rgba(239,239,239,1) 10%,rgba(225,223,226,1) 100%);
+	background-image: linear-gradient(top, rgba(240,240,240,1) 0%,rgba(239,239,239,1) 10%,rgba(225,223,226,1) 100%);
+	right: -5px;
+	bottom: 1px;
+
+	-webkit-transform: skew(-35deg, 0);
+	-moz-transform: skew(-35deg, 0);
+	-o-transform: skew(-35deg, 0);
+	-ms-transform: skew(-35deg, 0);
+	transform: skew(-35deg, 0);
+
+	-webkit-box-shadow: 2px 1px 2px rgba(100,100,100,0.1);
+	box-shadow: 2px 1px 2px rgba(100,100,100,0.1);
+}
+
+.button.next:before {
+	content: '';
+	position: absolute;
+
+	background-image: -webkit-linear-gradient(top, rgba(253,189,89,0) 0%,rgba(253,189,89,1) 1%,rgba(237,173,73,1) 100%);
+	background-image: -moz-linear-gradient(top, rgba(253,189,89,0) 0%,rgba(253,189,89,1) 1%,rgba(237,173,73,1) 100%);
+	background-image: -o-linear-gradient(top, rgba(253,189,89,0) 0%,rgba(253,189,89,1) 1%,rgba(237,173,73,1) 100%);
+	background-image: -ms-linear-gradient(top, rgba(253,189,89,0) 0%,rgba(253,189,89,1) 1%,rgba(237,173,73,1) 100%);
+	background-image: linear-gradient(top, rgba(253,189,89,0) 0%,rgba(253,189,89,1) 1%,rgba(237,173,73,1) 100%);
+	height: 50%;
+	width: 15px;
+	border-right: 1px solid #bcbcbc;
+	top: 1px;
+	right: -5px;
+
+	-webkit-transform: skew(35deg, 0);
+	-moz-transform: skew(35deg, 0);
+	-o-transform: skew(35deg, 0);
+	-ms-transform: skew(35deg, 0);
+	transform: skew(35deg, 0);
+}
+
+.button.next.event {
+}
+    
+#event-button {
+    position: absolute;
+    top: 55%; left: 90%;
+    z-index: 15;
+}
+
+#competition-button {
+    position: absolute;
+    top: 85%%; left: 90%;
+    z-index: 15;
+}
+
+#speaker-button {
+    position: absolute;
+    top: 115%; left: 90%;
+    z-index: 15;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */

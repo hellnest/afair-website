@@ -17,13 +17,32 @@
         <link rel="author" href="https://plus.google.com/107677850587168066989"/>
 
         <!--Script that will be used in this website -->
-        <script data-main="fsn/plugin" src="fsn/require-jquery.js"></script>
+        <script data-main="fsn/plugin" src="fsn/require-jquery.js" type="text/javascript"></script>
         <script src="js/waypoint.js" type="text/javascript"></script>
         <script src="js/jparallax.js" type="text/javascript"></script>
         <script src="js/jquery.vegas.js" type="text/javascript"></script>
         <script src="js/slides.min.jquery.js" type="text/javascript"></script>
         <script src="js/p1lax.js" type="text/javascript"></script>
+        <script src="js/jquery-event-frame.js" type="text/javascript"></script>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script>
+            $(function() {
+				if(jQuery('#parallax').length != 0){
+					if(jQuery(window).width() > 0){
+						
+						//apply parallax effect
+						jQuery('#parallax .parallax-layer').parallax(
+							{mouseport: jQuery('#parallax')}
+						);
+		
+						$(window).load(function(){
+							jQuery('#parallax .parallax-layer').css('display','block');		
+				
+						});
+					}
+				}
+			});
+		</script>
     </head>
 
     <body>
@@ -43,30 +62,12 @@
         </header>
 
             <section data-title="Welcome">
-            <script>
-				$(function() {
-				if(jQuery('#parallax').length != 0){
-					if(jQuery(window).width() > 0){
-						
-						//apply parallax effect
-						jQuery('#parallax .parallax-layer').parallax(
-							{mouseport: jQuery('#parallax')}
-						);
-		
-						$(window).load(function(){
-							jQuery('#parallax .parallax-layer').css('display','block');		
-				
-						});
-					}
-				}
-			});
-			</script>
                     <div id="parallax" class="parallax-viewport">
                         <div class="parallax-layer parallax4">
                             <img src="img/kakek-fly.png" />
                         </div>
                     </div>
-                    <article data-link="welcome-page" data-background="#fdbd59">
+                    <article data-link="welcome-page" data-background="#fff">
                     <div class="content-top-left">
                         <div class="image">
                             <a href="#about-afair">
@@ -134,26 +135,75 @@
             </section>
 
             <section data-title="Home">
-                    <article data-title:"Home" data-link="main" data-background="#fdbd59">
+                    <article data-title:"Home" data-link="main" data-background="#fff">
+                        <!-- Navigation Menu Home -->
+                        <div id="event-button">
+                        <a class="button next" href="#event">EVENT</a> 
+                        </div>
+                        <div id="competition-button">
+                        <a class="button next" href="#competition">COMPETITION</a>
+                        </div>
+                        <div id="speaker-button">
+                        <a class="button next" href="#speaker">SPEAKER</a>
+                        </div>
                         <div class="tabung">
-                        <img src="img/jar.png" width="242" height="500"/>
+                        <img src="img/jar.png" />
                         </div>
                         <div class="pipe1">
-                        <img src="img/pipe1.png" width="180" height="289" />
+                            <img src="img/pipe1.png" />
                         </div>
                         <div class="pipe2">
-                        <img src="img/pipe2.png" width="305" height="147" />
+                            <img src="img/pipe2.png" />
+                        </div>
+                        <div class="pipe3-hor">
+                            <img src="img/pipe3-horizr.png" />
                         </div>
                         <div class="gear-main">
-                        <img src="img/gear.png" width="95" height="91" />
+                            <img src="img/gear.png" width="95" height="91" />
                         </div>
                         <div class="gear-main_sub">
-                        <img src="img/gear.png" width="75" height="70"
+                            <img src="img/gear.png" width="75" height="70" />
                         </div>
+                        <div id="water1" class="waterdrop1">
+                            <img src="img/drop.png" width="25" height"35" />
+                        </div>
+                        <div id="water2" class="waterdrop2">
+                            <img src="img/drop.png" width="25" height"35" />
+                        </div>
+                        <div id="water3" class="waterdrop3">
+                            <img src="img/drop.png" width="25" height"35" />
+                        </div>              
                     </article>
-                    <article data-background="#fdbd59">
+                    <article data-link="event" data-background="#fdbd59">
                         <p>testing 2nd article</p>
                     </article>
+                    <article data-link="competition" data-background="#fff">
+                        <p>Competition Content</p>
+                    </article>
+                    <article data-link="speaker" data-background="#fff">
+                        <p>This is speaker and jury section</p>
+                    </article>
+            </section>
+            
+            <section data-title="gallery">
+            <article data-link="gal-2014" data-background="#fff">
+                <p>This is 2014 Gallery</p>    
+            </article>
+            <article data-link="gal-2013" data-background="#fff">
+                <p>this is 2013 Gallery</p>    
+            </article>
+            </section>
+            
+            <section data-title="Contact" title="Store - Partner - Contact Us">
+            <article data-title="Store" data-link="store" data-background="#fff">
+                <p>Store coming soon</p>    
+            </article>
+            <article data-title="Partner" data-link="partner" data-background="#fff">
+                <p>This is Partner Page</p>    
+            </article>
+            <article data-title="Contact Us" data-link="contact-us" data-background="#fff">
+                <p>Contact US Page</p>    
+            </article>
             </section>
         
         <footer>
